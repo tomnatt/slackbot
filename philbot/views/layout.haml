@@ -1,0 +1,23 @@
+!!!
+%html
+    %head
+        %title= title
+        %meta{:charset => 'UTF-8'}
+        %meta{:description => 'Powered by Steam'}
+        %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=UTF-8'}
+        %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
+        %link{:href => '/css/kickstart.css', :rel => 'stylesheet', :type => 'text/css'}
+        %link{:href => '/css/style.css', :rel => 'stylesheet', :type => 'text/css'}
+        %link{:href => '/css/steam.css', :rel => 'stylesheet', :type => 'text/css'}
+        / %script{:type => 'text/javascript', :src => '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'}
+        / %script{:type => 'text/javascript', :src => '/js/kickstart.js'}
+
+    %body.grid
+        %div.col_12
+            =yield
+
+    %footer.col_12
+        %p
+            This application is 
+            %a{:href => "http://steampowered.com"}= "powered by Steam"
+            

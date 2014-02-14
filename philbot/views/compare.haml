@@ -1,0 +1,10 @@
+%h1= "What could we play?"
+%p= "There are #{games.length.to_s} options"
+%ul.icons.gamelist.col_8
+    - games.each do |game|
+        %li
+            %i.icon-ok
+            #{game}
+%p.clearboth
+    A new challenger has appeared. 
+    %a{:href => "/"}= "Take me back."
