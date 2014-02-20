@@ -25,10 +25,12 @@ class MyApp < Sinatra::Base
     end
 
     post '/talk' do 
-        Slack::Post.post("Yo", "#test")
+        #Slack::Post.post("Yo", "#test")
+
+        name = params[:user_name]
 
         content_type :json
-        { :text => "blah" }.to_json
+        { :text => "Hi #{name}" }.to_json
     end 
 
 end
