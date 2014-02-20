@@ -24,4 +24,11 @@ class MyApp < Sinatra::Base
         { :text => "blah" }.to_json
     end
 
+    post '/talk' do 
+        Slack::Post.post("Yo", "#test")
+
+        content_type :json
+        { :text => "blah" }.to_json
+    end 
+
 end
